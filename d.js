@@ -1,13 +1,3 @@
-(function() {
-    const originalOpen = XMLHttpRequest.prototype.open;
-    
-    XMLHttpRequest.prototype.open = function(method, url, async, user, password) {
-        if (url.includes(".pnc.com")) {
-            url = url.replace(".pnc.com", ".fake.com");
-        }
-        return originalOpen.call(this, method, url, async, user, password);
-    };
-})();
 
 
 (self.webpackChunkdad_da_common_ui = self.webpackChunkdad_da_common_ui || []).push([
